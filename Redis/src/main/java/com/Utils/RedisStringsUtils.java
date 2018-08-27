@@ -2,8 +2,6 @@ package com.Utils;
 
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.lang.Nullable;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -228,7 +226,7 @@ public class RedisStringsUtils<K,V> {
     */ 
     public  String get(K key, long start, long end){
         try {
-            String data =   redisTemplate.opsForValue().get(key,var1,var2);
+            String data =   redisTemplate.opsForValue().get(key,start,end);
             return data;
         } catch (Exception e) {
             e.printStackTrace();
@@ -267,7 +265,7 @@ public class RedisStringsUtils<K,V> {
     public
     Boolean setBit(K key, long offset, boolean value){
         try {
-            Boolean data =   redisTemplate.opsForValue().setBit(key,offset,valueget);
+            Boolean data =   redisTemplate.opsForValue().setBit(key,offset,value);
             return data;
         } catch (Exception e) {
             e.printStackTrace();
