@@ -596,7 +596,7 @@ public class RedisZsetUtil<K,V> {
     public Set<V> rangeByLex(K key, RedisZSetCommands.Range range, RedisZSetCommands.Limit limit){
         try {
             Set<V> set = zSetOperations.rangeByLex(key,range,limit);
-            return ;
+            return set;
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;

@@ -23,6 +23,9 @@
 
 <h2>完成情况</h2>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/config/RedisConfig.java">Jedis配置类</a></li>
-<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisStringsUtil.java">String相关操作</a></li>
-<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisListUtil.java">List相关操作</a></li>
-
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/config/RedisUtilsConfig.java">Jedis工具配置类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisStringsUtil.java">String工具类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisListUtil.java">List工具类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisSetUtil.java">Set工具类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisZsetUtil.java">Zset工具类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisHashUtil.java">Hash工具类</a></li>
