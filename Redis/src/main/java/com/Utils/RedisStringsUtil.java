@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @See:
  * @create: 2018-08-28 02:40
  **/
-public class RedisStringsUtils<K,V> {
+public class RedisStringsUtil<K,V> {
 
     RedisTemplate<K, V> redisTemplate;
 
@@ -26,7 +26,7 @@ public class RedisStringsUtils<K,V> {
      * @author: Mr.lgj
      * @date: 7/2/18
      */
-    public RedisStringsUtils(RedisTemplate<K, V> redisTemplate) {
+    public RedisStringsUtil(RedisTemplate<K, V> redisTemplate) {
 
         this.redisTemplate = redisTemplate;
     }

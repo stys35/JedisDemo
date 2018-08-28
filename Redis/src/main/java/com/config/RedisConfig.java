@@ -2,7 +2,7 @@ package com.config;
 
 
 import com.Utils.RedisListUtil;
-import com.Utils.RedisStringsUtils;
+import com.Utils.RedisStringsUtil;
 import com.Utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -113,45 +113,7 @@ public class RedisConfig {
         redisTemplate.setConnectionFactory(factory);
     }
 
-    /**
-     * @description: 创建 RedisUtils  Bean
-     * @param:
-     * @return:
-     * @author: Mr.lgj
-     * @date: 7/2/18
-    */
-    @Bean
-    public RedisUtils  redisUtils(RedisTemplate<String, Object> redisTemplate){
-        RedisUtils redisUtils = new RedisUtils(redisTemplate);
-        return  redisUtils;
-    }
 
-    /** 
-     * @description:   String
-     * @param:
-     * @return:  
-     * @author: Mr.lgj 
-     * @date: 8/28/18 
-    */ 
-    @Bean
-    public RedisStringsUtils redisStringsUtils(RedisTemplate<String, Object> redisTemplate){
-        System.out.println("RedisStringsUtils bean 创建.............");
-        RedisStringsUtils redisStringsUtils = new RedisStringsUtils(redisTemplate);
-        return  redisStringsUtils;
-    }
-    /**
-     * @description: list 操作
-     * @param:
-     * @return:
-     * @author: Mr.lgj
-     * @date: 8/28/18
-    */
-    public RedisListUtil redisListUtils(RedisTemplate<String, Object> redisTemplate){
-        System.out.println("RedisStringsUtils bean 创建.............");
-        RedisListUtil redisListUtil = new RedisListUtil(redisTemplate);
-
-        return  redisListUtil;
-    }
     @Override
     public String toString() {
         return "RedisConfig{" +

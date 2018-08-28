@@ -17,6 +17,9 @@
 <li>
     spring-data-redis :2.0.8
 </li>
+<li>
+    <a href="http://www.redis.cn/">Redis学习</a>
+</li>
 
 <h2>完成情况</h2>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/config/RedisConfig.java">Jedis配置类</a></li>

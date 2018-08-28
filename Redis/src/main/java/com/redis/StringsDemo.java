@@ -1,15 +1,12 @@
 package com.redis;
 
-import com.Utils.RedisStringsUtils;
-import com.Utils.RedisUtils;
+import com.Utils.RedisStringsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
-import redis.clients.jedis.JedisPoolConfig;
 
-import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +28,7 @@ public class StringsDemo {
 
 
     @Autowired
-    private RedisStringsUtils redisStringsUtils;
+    private RedisStringsUtil redisStringsUtil;
 
 
     public void getAndset(){
@@ -40,14 +37,14 @@ public class StringsDemo {
         String key = "name";
         String value = "liang";
 
-        Boolean flag = redisStringsUtils.set(key,value);
+        Boolean flag = redisStringsUtil.set(key,value);
         log.info("普通设置 set test is " + flag);
 
         //带过期时间设置
         String key1 = "age";
         Integer value1 = 12;
 
-        Boolean flag1 = redisStringsUtils.set(key1,value1,1500,TimeUnit.MILLISECONDS);
+        Boolean flag1 = redisStringsUtil.set(key1,value1,1500,TimeUnit.MILLISECONDS);
         Assert.isTrue(flag1 == true,"带过期时间设置失败");
         log.info("带过期时间设置 set test is " + flag1);
 
@@ -60,7 +57,7 @@ public class StringsDemo {
         Map<String,String> map = new HashMap<String,String>();
         map.put("multiSet1","1");
         map.put("multiSet2","2");
-        Boolean flag =  redisStringsUtils.multiSet(map);
+        Boolean flag =  redisStringsUtil.multiSet(map);
 
         Assert.isTrue(flag == true,"mset设置失败");
         log.info("mset设置 multiSet test is " + flag);
