@@ -1,9 +1,7 @@
 package com.config;
 
 
-import com.Utils.RedisListUtil;
-import com.Utils.RedisStringsUtil;
-import com.Utils.RedisUtils;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -47,7 +45,7 @@ public class RedisConfig {
 
 
     /**
-     * @description:   创建  JedisPoolConfig Bean
+     * @description:   创建  JedisPoolConfig Bean　，连接池
      * @param:
      * @return:
      * @author: Mr.lgj
@@ -66,7 +64,7 @@ public class RedisConfig {
 
     }
     /**
-     * @description: 创建 JedisConnectionFactory Bean
+     * @description: 创建 JedisConnectionFactory Bean　
      * @param:
      * @return:
      * @author: Mr.lgj
