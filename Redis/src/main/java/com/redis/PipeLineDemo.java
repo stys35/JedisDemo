@@ -32,13 +32,23 @@ public class PipeLineDemo  implements SessionCallback<Object>  {
     // @Qualifier()
     RedisTemplate<String,Object> redisTemplate;
 
+    /**
+     * @description:    普通方式操作 :1000ms 左右；pipeline 方式操作　：200ms左右
+     * @param:
+     * @return:
+     * @author: Mr.lgj
+     * @date: 8/29/18
+    */
     public void pipeLineSet(){
 
+        //普通方式操作
         Long time = System.currentTimeMillis();
         for (int i = 0; i < 10000; i++) {
             redisTemplate.opsForValue().increment("pipline", 1);
         }
         System.out.println("耗时：" + (System.currentTimeMillis() - time));
+
+        //pipe line 方式操作
         time = System.currentTimeMillis();
         redisTemplate.executePipelined(new SessionCallback<Object>() {
             @Override
@@ -53,6 +63,13 @@ public class PipeLineDemo  implements SessionCallback<Object>  {
     }
 
 
+    /**
+     * @description:  使用 redisTemplate　的executePipelined方法执行
+     * @param:
+     * @return:
+     * @author: Mr.lgj
+     * @date: 8/29/18
+    */
     public void pipeLineTest(){
 
         Long time = System.currentTimeMillis();

@@ -35,7 +35,7 @@ public class StringsDemo {
 
         //普通设置
         String key = "name";
-        String value = "liang";
+        String value = "liangxxxxx";
 
         Boolean flag = redisStringsUtil.set(key,value);
         log.info("普通设置 set test is " + flag);
@@ -44,7 +44,7 @@ public class StringsDemo {
         String key1 = "age";
         Integer value1 = 12;
 
-        Boolean flag1 = redisStringsUtil.set(key1,value1,1500,TimeUnit.MILLISECONDS);
+        Boolean flag1 = redisStringsUtil.set(key1,value1,15000,TimeUnit.MILLISECONDS);
         Assert.isTrue(flag1 == true,"带过期时间设置失败");
         log.info("带过期时间设置 set test is " + flag1);
 

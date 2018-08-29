@@ -70,7 +70,7 @@ public class RedisConfig {
      * @author: Mr.lgj
      * @date: 7/2/18
     */
-    @Bean
+    @Bean(name = "JedisConnectionFactory")
     public JedisConnectionFactory jedisConnectionFactory(JedisPoolConfig jedisPoolConfig){
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(jedisPoolConfig);
         jedisConnectionFactory.setHostName(host);
