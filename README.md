@@ -30,6 +30,7 @@
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisSetUtil.java">Set工具类</a></li>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisZsetUtil.java">Zset工具类</a></li>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisHashUtil.java">Hash工具类</a></li>
+<li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/Utils/RedisHyperLogLogUtil.java">HyperLogLog工具类</a></li>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/redis/TransactionDemo.java">事务处理</a></li>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/redis/PipeLineDemo.java">PipeLine方式操作</a></li>
 <li><a href="https://github.com/Mrlgj/JedisDemo/blob/master/Redis/src/main/java/com/redis/pubsub">发布/订阅实现</a></li>

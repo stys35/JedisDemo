@@ -99,6 +99,13 @@ public class RedisConfig {
         return redisTemplate;
     }
 
+    @Bean
+    public RedisTemplate functionDomainRedisTemplate2(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate redisTemplate = new RedisTemplate<>();
+        initDomainRedisTemplate(redisTemplate, redisConnectionFactory);
+        return redisTemplate;
+    }
+
 
     /**
      * @description:  配置模板

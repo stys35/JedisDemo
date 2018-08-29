@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.query.SortQuery;
 import org.springframework.data.redis.core.query.SortQueryBuilder;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Array;
@@ -53,9 +54,8 @@ public class SortDemo {
                                                      // .noSort()
                                                       .order(SortParameters.Order.ASC)
                                                       .limit(0,10)
-                                                      .alphabetical(false).build();
-        List<String> numList = redisTemplate.sort(sortQuery,
-                                  new GenericJackson2JsonRedisSerializer());
+                                                      .alphabetical(true).build();
+        List<String> numList = redisTemplate.sort(sortQuery);
 
         System.out.println("numList lenth is :" + numList.size());
         for(String num : numList){
