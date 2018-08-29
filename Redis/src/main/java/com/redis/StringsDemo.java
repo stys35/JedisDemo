@@ -31,6 +31,8 @@ public class StringsDemo {
     private RedisStringsUtil redisStringsUtil;
 
 
+
+
     public void getAndset(){
 
         //普通设置

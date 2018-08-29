@@ -42,7 +42,6 @@ public class RedisUtilsConfig {
      */
     @Bean
     public RedisStringsUtil redisStringsUtil(RedisTemplate<String, Object> redisTemplate){
-        System.out.println("RedisStringsUtils bean 创建.............");
         RedisStringsUtil redisStringsUtils = new RedisStringsUtil(redisTemplate);
         return  redisStringsUtils;
     }
@@ -53,9 +52,9 @@ public class RedisUtilsConfig {
      * @author: Mr.lgj
      * @date: 8/28/18
      */
-    public RedisListUtil redisListUtils(RedisTemplate<String, Object> redisTemplate){
-        System.out.println("RedisStringsUtils bean 创建.............");
-        RedisListUtil redisListUtil = new RedisListUtil(redisTemplate);
+    @Bean
+    public  RedisListUtil<String,String> redisListUtils(RedisTemplate<String,String> redisTemplate){
+        RedisListUtil<String,String> redisListUtil = new RedisListUtil<String,String>(redisTemplate);
 
         return  redisListUtil;
     }
@@ -67,8 +66,8 @@ public class RedisUtilsConfig {
      * @author: Mr.lgj
      * @date: 8/28/18
      */
+    @Bean
     public RedisSetUtil redisSetUtil(RedisTemplate<String, Object> redisTemplate){
-        System.out.println("RedisStringsUtils bean 创建.............");
         RedisSetUtil redisSetUtil = new RedisSetUtil(redisTemplate);
 
         return  redisSetUtil;

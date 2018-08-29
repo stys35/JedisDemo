@@ -91,6 +91,15 @@ public class RedisConfig {
         initDomainRedisTemplate(redisTemplate, redisConnectionFactory);
         return redisTemplate;
     }
+
+    @Bean
+    public RedisTemplate<String, Integer> functionDomainRedisTemplate1(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Integer> redisTemplate = new RedisTemplate<>();
+        initDomainRedisTemplate(redisTemplate, redisConnectionFactory);
+        return redisTemplate;
+    }
+
+
     /**
      * @description:  配置模板
      * @param:
@@ -98,7 +107,7 @@ public class RedisConfig {
      * @author: Mr.lgj
      * @date: 7/2/18
     */
-    private void initDomainRedisTemplate(RedisTemplate<String, Object> redisTemplate, RedisConnectionFactory factory) {
+    private void initDomainRedisTemplate(RedisTemplate<String, ? extends  Object> redisTemplate, RedisConnectionFactory factory) {
         //如果不配置Serializer，那么存储的时候缺省使用String，如果用User类型存储，那么会提示错误User can't cast to String！
         //配置key序列化机制
         redisTemplate.setKeySerializer(new StringRedisSerializer());
